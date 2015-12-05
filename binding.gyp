@@ -21,7 +21,11 @@
       'conditions': [
         [ 'OS=="linux"', {
           'cflags_cc' : [
-              '-std=c++11'
+              '-std=c++11',
+              '-fPIC'
+          ],
+          'ldflags' : [
+              '-fPIC'
           ],
           'libraries':[
               '-Wl,-rpath=<!@(pkg-config libosrm --variable=prefix)/lib',
